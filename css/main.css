@@ -1,0 +1,135 @@
+/*排版元素盡量在前面就setting好*/
+
+body {
+    margin: 0; /*讓上面那塊白色空白不見*/
+    padding: 0;
+    font-family:
+        "Lucida Grande"
+        Helvetica,
+        "Helvetica Neue",
+        "HelveticaNeue-Light",
+        "Helvetica Neue Light",
+        Arial,
+        sans-serif;
+    font-size: 90%;
+}
+
+div#nav ul {
+    padding-left: 0px;
+} /*讓nav去掉前面的項目點，並且往左靠*/
+
+/*
+#banner, #nav, #content, #supporting, #footer {
+   padding: 5px;
+}
+這個會讓整個版面不對，難用QQ
+*/
+
+.container {
+    padding: 10px;
+} /*讓文字不要緊黏著navigation，有點空隙*/
+
+.item{
+    padding-top: 200px;
+    margin-top: -200px;
+}
+
+.wrapper {
+    width: 600px;
+    margin: 0 auto;
+} /*整塊匡起來置中*/
+
+#banner {
+    background-color: rgba(200, 200, 200, 0.5);
+    width: 800px;
+    height: 200px;
+    float: left; /*由左到右、上到下排版*/
+    clear: both;
+    position:fixed; /*上面區塊固定*/
+}
+
+/*navigation下的list*/
+#nav li {
+    display: block;
+    background-color: darkorange;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+#nav li a{
+    text-decoration: none; /*刪除超連結的底線*/
+    color: white;
+}
+
+#nav li:hover{
+    background-color: bisque;
+    color: black;
+}
+/*滑鼠滑在上面時背景變色*/
+
+#nav li a:hover{
+    text-decoration: none;
+    color: black;
+}
+/*滑鼠滑到上面時字變色*/
+
+#nav {
+    background-color: aliceblue;
+    width: 200px; /*往右邊拉200pixel*/
+    height: 800px;
+    position:fixed;
+    margin-top: 200px;/*將上面三個項目往下拉*/
+}
+
+#content {
+    width: 500px;
+    float: left;
+    margin-top:200px;
+    margin-left: 200px;
+}
+    
+#supporting {
+    background-color: beige;
+    width: 100px;
+    height: 800px;
+    float: left;
+}
+
+#footer {
+    background-color: aquamarine;
+    width:800px;
+    height:100px;
+    float: left;
+    clear: both;
+}
+
+/*copy別人圖檔的style*/
+div.img { /*class為img的division*/
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid gray;
+    height: auto;
+    width: auto;  
+    float: left;
+    text-align: center;
+}
+
+div.img img { /*div.img底下的img element*/
+    display: inline;
+    margin: 5px;
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+/*    transform: translate(-50%, -50%);*/
+    border: 1px solid #ffffff;
+    object-fit: cover;
+}
+
+div.img a:hover img { /*a為hover狀態下的img element*/
+    border:1px solid darkgray;
+}
+
+div.img a {
+    text-decoration: none;
+}
+
